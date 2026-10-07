@@ -75,6 +75,24 @@ body {
 
 /* YOUR CODE: Lab 1 states (:hover, :focus-visible, :active) */
 
+.state-button, .state-link {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.15s ease:
+}
+
+.state-button:hover, .state-button:focus-visible {
+  color: var(--extra-color);
+  background-color: var(--primary-color);
+} 
+
+.state-button:active {
+  transform: scale(0.92);
+}
+
+.state-button:focus-visible {
+  outline: 3px solid var(--triadic-color);
+  outline-offset: 4px;
+}
+
 
 
 
@@ -104,6 +122,32 @@ body {
 
 /* YOUR CODE: Lab 2 timing functions (one per racer) */
 
+.racer-linear {
+  transition-timing-function: linear;
+}
+
+.racer-ease {
+  transition-timing-function: ease;
+}
+
+.racer-ease-in {
+  transition-timing-function: ease-in;
+}
+
+.racer-ease-out {
+  transition-timing-function: ease-out;
+}
+
+.racer-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.racer-mine{
+  transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  background-color: var(--triadic-color);
+}
+
+
 
 
 
@@ -127,7 +171,26 @@ body {
 }
 
 /* YOUR CODE: Lab 3 transforms (lift, grow, spin, tilt) */
+.tile {
+  transition:all 0.4s ease;
+}
 
+.tile-lift:hover, .tile-lift:focus-visible {
+  transform: translate(0, -20px);
+  box-shadow: 10px 10px 40px black;
+}
+
+.tile-grow:hover, .tile-grow:focus-visible {
+  transform: scale(1.5,1.5);
+}
+
+.tile-spin:hover, .tile-spin:focus-visible {
+  transform: rotate(10turn);
+}
+
+.tile-tilt:hover, .tile-tilt:focus-visible {
+  transform: rotate(30deg);
+}
 
 
 
@@ -150,6 +213,41 @@ body {
 }
 
 /* YOUR CODE: Lab 4, six effects */
+.effect-card {
+  transition:all 0.4s ease;
+}
+
+.effect-2:hover, .effect-2:focus-visible {
+  transform: translate(0, -40px);
+  background-color: black;
+  color: red;
+}
+
+.effect-1:hover, .effect-2:focus-visible {
+  box-shadow: 10px 10px 20px 20px rgb(255 0 0 / 0.4);
+  
+}
+
+.effect-4:hover, .effect-2:focus-visible {
+  background-color: var(--triadic-color);
+  transform: rotate(7200deg);
+}
+
+.effect-5:hover, .effect-5:focus-visible {
+   color: var(--extra-color);
+   background-color: var(--primary-color);
+
+}
+
+.effect-3:hover, .effect-3:focus-visible {
+  transform: scale(5.5);
+  background-color: rgb(237, 237, 162);
+}
+
+.effect-6:hover, .effect-3:focus-visible {
+  transform: scale(-7);
+  background-color: var(--secondary-color);
+}
 
 
 
